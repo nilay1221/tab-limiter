@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tab Limiter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="head">
+      <h1>Tab Limiter</h1>
+      <label class="switch" title="Enable or disable enforcement">
+        <input id="enabled" type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <p class="status" id="status">Counting tabs…</p>
+
+    <div class="meter">
+      <div class="meter-bar" id="meterBar"></div>
+    </div>
+
+    <form id="form" class="form">
+      <label for="limit">Limit unpinned tabs per window</label>
+      <div class="row">
+        <input id="limit" type="number" min="1" step="1" inputmode="numeric" />
+        <button type="submit">Save</button>
+      </div>
+      <p class="hint" id="hint">Pinned tabs are always allowed and never count.</p>
+    </form>
+
+    <footer class="foot">
+      <a href="#" id="openOptions">Options</a>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

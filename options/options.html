@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tab Limiter — Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>Tab Limiter</h1>
+      <p class="lede">
+        Enforce a maximum number of unpinned tabs per browser window. When the
+        limit is reached, any newly opened unpinned tab is closed immediately.
+      </p>
+
+      <form id="form">
+        <div class="field">
+          <label for="limit">Unpinned tabs per window</label>
+          <input id="limit" type="number" min="1" step="1" inputmode="numeric" />
+        </div>
+
+        <label class="check">
+          <input id="enabled" type="checkbox" />
+          <span>Enable Tab Limiter</span>
+        </label>
+
+        <div class="actions">
+          <button type="submit">Save</button>
+          <span class="status" id="status" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+
+      <section class="notes">
+        <h2>Notes</h2>
+        <ul>
+          <li>Pinned tabs (and Zen Essentials) are always allowed and never count.</li>
+          <li>The limit is enforced per window.</li>
+          <li>Lowering the limit never closes tabs that are already open.</li>
+          <li>
+            On browser startup there is a short grace period so session restore
+            is not interrupted.
+          </li>
+          <li>The toolbar popup lets you change the limit for quick access.</li>
+        </ul>
+      </section>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>
