@@ -1,5 +1,10 @@
 # Tab Limiter
 
+[![Platform](https://img.shields.io/badge/platform-Chrome%20%7C%20Firefox%20%7C%20Zen-blue)](#install-in-chrome--chromium)
+[![Manifest](https://img.shields.io/badge/manifest-v3-success)](#files)
+[![No build step](https://img.shields.io/badge/build-none-brightgreen)](#files)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](#license)
+
 A cross-browser extension for **Zen Browser** (Firefox/Gecko) and **Chrome**
 (Chromium) that caps the number of unpinned tabs per window. Open one too many
 and it is closed immediately, with a badge and notification explaining why.
@@ -8,6 +13,18 @@ and it is closed immediately, with a badge and notification explaining why.
 - Per-window limit, pinned tabs (and Zen Essentials) exempt.
 - Configurable from the toolbar popup and the options page.
 - Default limit: **10**.
+
+---
+
+## Contents
+
+- [Files](#files)
+- [Install in Chrome / Chromium](#install-in-chrome--chromium)
+- [Install in Zen Browser](#install-in-zen-browser)
+- [Usage](#usage)
+- [Behavior & edge cases](#behavior--edge-cases)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
 
 ---
 
@@ -37,6 +54,14 @@ on globals surviving between events.
 Unpacked extensions persist across browser restarts in Chrome. Chrome may warn
 that the `background.scripts` key is unrecognized — harmless; Chrome uses
 `service_worker`.
+
+Prefer to start from a clone?
+
+```sh
+git clone https://github.com/nilay1221/tab-limiter.git
+cd tab-limiter
+# then Load unpacked -> this folder
+```
 
 ---
 
@@ -120,3 +145,9 @@ The signed add-on now survives restarts and updates.
   Check that notifications are allowed for the browser at the OS level.
 - **A tab I opened wasn't closed?** If you are within the startup grace period,
   or the tab is pinned, it is intentionally allowed.
+
+---
+
+## License
+
+Released under the [MIT License](LICENSE).
