@@ -18,6 +18,7 @@ and it is closed immediately, with a badge and notification explaining why.
 
 ## Contents
 
+- [Screenshot](#screenshot)
 - [Files](#files)
 - [Install in Chrome / Chromium](#install-in-chrome--chromium)
 - [Install in Zen Browser](#install-in-zen-browser)
@@ -25,6 +26,16 @@ and it is closed immediately, with a badge and notification explaining why.
 - [Behavior & edge cases](#behavior--edge-cases)
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
+
+---
+
+## Screenshot
+
+![Tab Limiter settings page](images/Extension-popup.png)
+
+The options page, shown here from Chrome's extension settings: set the
+per-window limit, toggle enforcement, and save — the popup gives the same
+controls with a live tab count.
 
 ---
 
@@ -36,6 +47,7 @@ background.js              # enforcement: tabs.onCreated -> count -> close if ov
 popup/                     # toolbar popup: live "count / limit" + quick limit edit
 options/                   # options page: limit, enable/disable, notes
 icons/                     # 16/32/48/128 px + source SVG
+images/                    # screenshots used in this README
 ```
 
 `background.js` is written for a non-persistent context: listeners are
